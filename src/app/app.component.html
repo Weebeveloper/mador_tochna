@@ -2,7 +2,12 @@
   <div class="navbar__container">
     <div class="navbar">
       <div class="navbar__navigations">
-        <div class="navbar__navigations__button">מדריכים</div>
+        <a
+          class="navbar__navigations__button"
+          [routerLink]="['/guides']"
+          routerLinkActive="navbar__navigations__button__active"
+          >מדריכים</a
+        >
         <div class="navbar__navigations__button">ניסיון 1</div>
         <div class="navbar__navigations__button">ניסיון 2</div>
         <div class="navbar__navigations__button">ניסיון 3</div>

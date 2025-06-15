@@ -25,7 +25,6 @@
 
       &__navigations {
         margin-block: 10%;
-        // flex: 1;
         height: 70%;
         display: flex;
         flex-direction: column;
@@ -46,13 +45,36 @@
           line-height: 1.5rem;
           font-size: 1.5rem;
           font-weight: bold;
+          color: var(--navbar-text-color);
+          text-decoration: none;
 
           position: relative;
 
+          &__active {
+            background: var(--navbar-selected-text-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            box-shadow: inset 0px 0px 20px var(--navbar-border-shadow-color);
+            border-radius: 5px;
+
+            &:hover {
+              -webkit-background-clip: initial;
+              -webkit-text-fill-color: initial;
+              background-clip: initial;
+              background: initial;
+              color: var(--navbar-text-hover-color);
+            }
+          }
+
           &:hover {
             cursor: pointer;
+            color: var(--navbar-text-hover-color);
+
             &::before {
               width: 100%;
+              box-shadow: inset 0px 0px 20px var(--navbar-border-shadow-color);
             }
           }
 
@@ -64,6 +86,7 @@
             right: 0;
             width: 0%;
             height: 100%;
+            border-radius: 5px;
 
             transition: width 0.2s ease;
             background: var(--navbar-hover-gradient);

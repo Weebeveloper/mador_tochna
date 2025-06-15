@@ -1,15 +1,47 @@
-.data__cards__container,
-.file__buttons__container {
-  height: 25vh;
+@import "src/mixins/scrollbar.scss";
+
+.page__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4em;
+
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    background: var(--page-title-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__input {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.divider {
+  width: 99%;
+  height: 2px;
+  background: var(--tochna-gradient);
+  margin-bottom: 1em;
+}
+
+.data__cards__container {
+  box-sizing: border-box;
+
+  padding: 1em;
+  height: 85%;
+  overflow-y: auto;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 2px dotted gray;
+  flex-wrap: wrap;
+  gap: 2em;
 }
 
-.file__buttons__container {
-  &__button {
-    transform: scale(1.5);
-  }
-}
+@include scrollbar;
