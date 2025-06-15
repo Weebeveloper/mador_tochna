@@ -1,0 +1,10 @@
+@import "light-theme.scss";
+@import "dark-theme.scss";
+
+$theme: "light";
+
+@if $theme == "light" {
+  @include light-theme;
+} @else if $theme == "dark" {
+  @include dark-theme;
+}

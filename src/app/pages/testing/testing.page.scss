@@ -1,0 +1,15 @@
+.data__cards__container,
+.file__buttons__container {
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px dotted gray;
+}
+
+.file__buttons__container {
+  &__button {
+    transform: scale(1.5);
+  }
+}

@@ -1,0 +1,141 @@
+.app__container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+
+  .navbar__container {
+    width: 14%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navbar {
+      width: 90%;
+      height: 95%;
+      border: 2px solid var(--navbar-border-color);
+      border-radius: 30px;
+      box-shadow: 0px 0px 8px var(--navbar-border-shadow-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+
+      &__navigations {
+        margin-block: 10%;
+        // flex: 1;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 0;
+        width: 100%;
+
+        &__button {
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          text-align: center;
+          line-height: 1.5rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+
+          position: relative;
+
+          &:hover {
+            cursor: pointer;
+            &::before {
+              width: 100%;
+            }
+          }
+
+          &::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0%;
+            height: 100%;
+
+            transition: width 0.2s ease;
+            background: var(--navbar-hover-gradient);
+          }
+        }
+      }
+
+      &__icon__container {
+        width: 84%;
+        height: 24%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .divider {
+          width: 110%;
+          background: var(--navbar-hover-gradient);
+          height: 2px;
+        }
+
+        .photo__container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .navbar__icon {
+            position: absolute;
+
+            &[data-handles] {
+              margin-bottom: 8%;
+              width: 76%;
+              height: 76%;
+            }
+
+            &[data-title] {
+              margin-top: 0%;
+              width: 120%;
+              height: 120%;
+            }
+
+            &[data-helm] {
+              margin-bottom: 12%;
+              width: 82%;
+              height: 85%;
+              animation: helmRotation 10s infinite;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page {
+    flex: 1;
+    height: 100%;
+  }
+}
+
+@keyframes helmRotation {
+  0% {
+    transform: rotateZ(-20deg);
+  }
+
+  50% {
+    transform: rotateZ(20deg);
+  }
+
+  100% {
+    transform: rotateZ(-20deg);
+  }
+}

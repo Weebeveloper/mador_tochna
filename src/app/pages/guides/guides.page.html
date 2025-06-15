@@ -1,0 +1,26 @@
+<h1>קלפים:</h1>
+
+<div class="data__cards__container">
+  <data-card
+    *ngFor="let dataCard of metadata.dataCards$ | async"
+    [cardId]="dataCard.id"
+    [cardName]="dataCard.name"
+    [cardDescription]="dataCard.description"
+  ></data-card>
+</div>
+
+<h1>כפתורי קבצים:</h1>
+<div class="file__buttons__container">
+  <button mat-raised-button class="file__buttons__container__button">
+    קובץ 1
+  </button>
+  <button mat-raised-button class="file__buttons__container__button">
+    קובץ 2
+  </button>
+  <button mat-raised-button class="file__buttons__container__button">
+    קובץ 3
+  </button>
+  <button mat-raised-button class="file__buttons__container__button">
+    קובץ 4
+  </button>
+</div>

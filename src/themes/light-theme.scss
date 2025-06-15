@@ -1,0 +1,16 @@
+@mixin light-theme {
+  :root {
+    --tochna-gradient: linear-gradient(10deg, #1d5553 20%, #07b3a8 100%);
+
+    --data-card-background: rgba(0, 0, 255, 0.514);
+    --data-card-text-color: white;
+
+    --navbar-border-color: #09aaa2;
+    --navbar-border-shadow-color: #09c2b9b7;
+    --navbar-hover-gradient: linear-gradient(
+      10deg,
+      rgba(29, 85, 83, 0.503) 20%,
+      rgb(7, 179, 168, 0.503) 100%
+    );
+  }
+}
