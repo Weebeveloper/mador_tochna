@@ -1,12 +1,21 @@
 <div class="page__header">
   <h1 class="page__header__title">מדריכים</h1>
-  <input class="page__header__input" />
+  <form [formGroup]="filters" class="page__header__input__container">
+    <mat-form-field class="page__header__input__container__formfield">
+      <input
+        matInput
+        formControlName="search"
+        placeholder="חיפוש חופשי..."
+        maxlength="40"
+      />
+    </mat-form-field>
+  </form>
 </div>
 <div class="divider"></div>
 
 <div class="data__cards__container">
   <data-card
-    *ngFor="let dataCard of metadata.dataCards$ | async"
+    *ngFor="let dataCard of dataCards$ | async"
     [cardId]="dataCard.id"
     [cardName]="dataCard.name"
     [cardDescription]="dataCard.description"
