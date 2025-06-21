@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="wheel-container">
+    <img class="wheel" src="assets/splash-screen/wheel.png" />
+    <img class="right-wheel" src="assets/splash-screen/right-side-wheel.png" />
+    <img class="left-wheel" src="assets/splash-screen/left-side-wheel.png" />
+    <div class="tear-container">
+      <img class="tear" src="assets/splash-screen/teardrop.png" />
+    </div>
+    <div class="html-logo">
+      <span class="wave" [ngClass]="drain ? 'wave-drain' : ''"></span>
+      <img src="assets/splash-screen/html-logo.png" />
+    </div>
+    <div class="text">
+      <span class="wave-fill" [ngClass]="fill ? 'fill' : ''"> </span>
+    </div>
+  </div>
+</div>
