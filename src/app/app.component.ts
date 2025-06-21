@@ -1,21 +1,15 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import anime from 'animejs/lib/anime.es.js';
+import { Component } from '@angular/core';
+import { delay, map, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
-  @ViewChild('box', { static: true }) myBox!: ElementRef;
-
-  ngAfterViewInit(): void {
-    anime({
-      targets: this.myBox.nativeElement,
-      translateX: 250,
-      rotate: '1turn',
-      backgroundColor: '#00FF00',
-      duration: 2000,
-    });
-  }
+export class AppComponent {
+  public static readonly SPLASH_SCREEN_DURATION = 3200;
+  readonly splashScreen$: Observable<boolean> = of(false).pipe(
+    delay(AppComponent.SPLASH_SCREEN_DURATION),
+    map(() => true)
+  );
 }

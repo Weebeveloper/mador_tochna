@@ -8,7 +8,7 @@
 .container {
   height: 500%;
   width: 500%;
-  transform: scale(0.2);
+  transform: scale(0.15);
 }
 
 .right-wheel {
@@ -26,8 +26,8 @@
 
 .wheel-container {
   position: absolute;
-  inset-block-start: 45%;
-  inset-inline-start: 50%;
+  top: 45%;
+  left: 50%;
   transform: translate(-50%, -50%) !important;
   display: flex;
   place-content: center;
@@ -41,6 +41,7 @@
 .tear-container {
   left: 50%;
   transform: translateX(-50%);
+
   z-index: -1;
   bottom: 17%;
   position: absolute;
@@ -58,8 +59,8 @@
   color: #00aeff;
   overflow: hidden;
   z-index: 1;
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%) !important;
   display: flex;
   place-content: center;

@@ -3,6 +3,8 @@
   width: 100vw;
   overflow: hidden;
   display: flex;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 
   .navbar__container {
     width: 14%;
@@ -163,10 +165,12 @@
   }
 }
 
-.splash__screen {
-  width: 100vw;
-  height: 100vh;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
