@@ -87,7 +87,8 @@
   position: absolute;
   width: 100%;
   height: 123px;
-  background-image: url("/assets/splash-screen/wave.png");
+  // Relative path for the URL to access the location as it should.
+  background-image: url("../../../assets/splash-screen/wave.png");
   background-repeat: repeat-x;
   top: -120px;
   animation: wavy 4s linear infinite;
@@ -114,7 +115,7 @@
   width: 200%;
   height: 20%;
   z-index: -1;
-  mask-image: url("/assets/splash-screen/mador-tochna.png");
+  mask-image: url("../../../assets/splash-screen/mador-tochna.png");
   mask-repeat: no-repeat;
   mask-position: center;
 }
@@ -135,7 +136,7 @@
   position: absolute;
   width: 100%;
   height: 123px;
-  background-image: url("/assets/splash-screen/wave.png");
+  background-image: url("../../../assets/splash-screen/wave.png");
   background-repeat: repeat-x;
   top: -123px;
   animation: wavy 5s linear infinite;
