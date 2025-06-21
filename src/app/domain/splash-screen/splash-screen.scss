@@ -1,0 +1,147 @@
+:host {
+  display: flex;
+  place-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.container {
+  height: 500%;
+  width: 500%;
+  transform: scale(0.15);
+}
+
+.right-wheel {
+  position: absolute;
+  top: 70%;
+  right: -5%;
+  z-index: -1;
+}
+
+.left-wheel {
+  position: absolute;
+  top: 70%;
+  left: -5%;
+}
+
+.wheel-container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  display: flex;
+  place-content: center;
+  z-index: 4;
+
+  .wheel {
+    padding-block-end: 13%;
+  }
+}
+
+.tear-container {
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: -1;
+  bottom: 17%;
+  position: absolute;
+  display: flex;
+  place-content: center;
+}
+
+.tear {
+  width: 40%;
+  height: 40%;
+}
+
+.html-logo {
+  position: absolute;
+  color: #00aeff;
+  overflow: hidden;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  display: flex;
+  place-content: center;
+  padding-inline: 5%;
+  padding-block: 7%;
+  z-index: -1;
+  border-radius: 100rem;
+  width: fit-content;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  transition: all 2s;
+  z-index: 1;
+}
+
+.wave::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 123px;
+  background-image: url("/assets/splash-screen/wave.png");
+  background-repeat: repeat-x;
+  top: -120px;
+  animation: wavy 4s linear infinite;
+}
+
+@keyframes wavy {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+.wave-drain {
+  top: calc(100% + 123px);
+}
+
+.text {
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  transform: translate(-50%) !important;
+  width: 200%;
+  height: 20%;
+  z-index: -1;
+  mask-image: url("/assets/splash-screen/mador-tochna.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.wave-fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: calc(100% + 123px);
+  left: 0;
+  background-color: #262626;
+  transition: all 1.5s;
+  z-index: 0;
+}
+
+.wave-fill::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 123px;
+  background-image: url("/assets/splash-screen/wave.png");
+  background-repeat: repeat-x;
+  top: -123px;
+  animation: wavy 5s linear infinite;
+  overflow: hidden;
+}
+
+.fill {
+  top: 0;
+}

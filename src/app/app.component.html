@@ -1,4 +1,4 @@
-<div class="app__container">
+<div class="app__container" *ngIf="splashScreen$ | async; else loadingScreen">
   <div class="navbar__container">
     <div class="navbar">
       <div class="navbar__navigations">
@@ -46,3 +46,7 @@
     <router-outlet></router-outlet>
   </div>
 </div>
+
+<ng-template #loadingScreen>
+  <app-splash-screen></app-splash-screen>
+</ng-template>
